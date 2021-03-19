@@ -1,12 +1,17 @@
 <?php
-$people = 'Saburo';
-
-if ($people === 'Taro') {
-    echo '太郎です';
-} elseif ($people === 'Jiro') {
-    echo '次郎です';
-} elseif ($people === 'Saburo') {
-    echo '三郎です';
-} else {
-    echo 'それ以外です';
+function getSquareArea($base, $height)
+{
+    return $base * $height;
 }
+function getTriangleArea($base,$height)
+{
+    return $base * $height / 2;
+}
+function getTrapezoidArea($upperBase, $lowerBase, $height)
+{
+    return ($upperBase + $lowerBase) * $height / 2;
+}
+
+echo getSquareArea(5,5) . "";
+echo getTriangleArea(7,8) ."";
+echo getTrapezoidArea(4,5,4);
